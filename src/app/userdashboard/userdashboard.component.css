@@ -1,0 +1,12 @@
+/***** Wrapper *****/
+ 
+.wrapper {
+    display: block;
+}
+  
+/***** Content *****/
+ 
+.content {
+    width: 70%;
+    transition: all 0.3s;
+}
