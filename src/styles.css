@@ -8128,8 +8128,8 @@
     font-size: 14px;
     line-height: 1.8;
     font-weight: normal;
-    background: #fafafa;
-    color: gray; }
+    background: #f266b9; /* #fafafa;*/
+    color: black; }
   
   a {
     -webkit-transition: .3s all ease;
@@ -8324,8 +8324,6 @@
     color: rgb(12, 12, 12) !important;
     font-size: 13px;
     border-radius: 4px;
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
     border: transparent; }
     .form-control:focus, .form-control:active {
       border-color: #000; }

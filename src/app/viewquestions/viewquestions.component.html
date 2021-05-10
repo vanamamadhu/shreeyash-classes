@@ -1,1 +1,21 @@
-<p>viewquestions works!</p>
+<h2 class="mb-4">View All Questions</h2>
+<div class="form-group col-6">
+    <label for="language">Select the  language :</label>
+    <select class="form-control">
+        <option>Mathematics</option>
+        <option>Science</option>
+    </select>
+</div>
+<table class="table table-dark">
+    <tbody *ngFor="let item of questionslist; let i=index">
+        <tr style="width:100%;">
+            <td style="width:80%;">
+                {{item}}
+            </td>
+            <td style="width:20%;">
+                <button class="btn btn-success ml-2">Edit</button>
+                <button class="btn btn-danger mr-1 ml-1">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
