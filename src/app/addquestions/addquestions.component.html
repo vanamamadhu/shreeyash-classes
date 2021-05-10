@@ -1,1 +1,71 @@
-<p>addquestions works!</p>
+<h2 class="mb-4">Add New Questions</h2>
+
+<form>
+    <div class="form-group col-6">
+        <label for="language">Select the  language :</label>
+        <select class="form-control">
+            <option>Telugu</option>
+            <option>Hindi</option>
+            <option>English</option>
+            <option>Mathematics</option>
+            <option>Science</option>
+            <option>Socical</option>
+          </select>
+      </div>
+    <div class="form-group col-12">
+      <label for="newquestion">Enter your new question : </label>
+      <textarea class="form-control" rows="4"></textarea>
+    </div>
+    <div class="form-group row col-12">
+        <div class="col-6">
+            <label for="optionone">Option One : </label>
+            <input type="text" class="form-control" id="optionone" placeholder="Option One">
+        </div>
+        <div class="col-6" style="float: right;">
+            <label for="optionone">Option Two : </label>
+            <input type="text" class="form-control" id="optiontwo" placeholder="Option Two">
+        </div>
+    </div>
+    <div class="form-group row col-12">
+        <div class="col-6">
+            <label for="optionone">Option three : </label>
+            <input type="text" class="form-control" id="optionthree" placeholder="Option Three">
+        </div>
+        <div class="col-6"  style="float: right;">
+            <label for="optionone">Option four : </label>
+            <input type="text" class="form-control" id="optionthree" placeholder="Option Four">
+        </div>
+    </div>
+    <div class="form-group col-6">
+        <label for="optionone">Select answer for above question : </label>
+    </div>
+    <div class="form-group row col-12">
+        <div class="checkbox col-3">
+            <label>
+              <input type="checkbox"name="optionsRadios"  value="optionone">
+              Option one
+            </label>
+        </div>
+        <div class="checkbox col-3">
+            <label>
+              <input type="checkbox"name="optionsRadios"  value="optiontwo">
+              Option two
+            </label>
+        </div>
+        <div class="checkbox col-3">
+            <label>
+              <input type="checkbox"name="optionsRadios"  value="optionthree">
+              Option three
+            </label>
+        </div>
+        <div class="checkbox col-3">
+            <label>
+              <input type="checkbox"name="optionsRadios"  value="optionfour">
+              Option four
+            </label>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-success pull-right row">Submit</button>
+  </form>
+
+
