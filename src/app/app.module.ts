@@ -9,6 +9,9 @@ import { ViewquestionsComponent } from './viewquestions/viewquestions.component'
 import { ScheduleexamComponent } from './scheduleexam/scheduleexam.component';
 import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
 import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './admindashboard/dashboard/dashboard.component';
+import { UDashboardComponent } from './userdashboard/dashboard/dashboard.component';
+import { UseraccountComponent } from './useraccount/useraccount.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { LoginComponent } from './login/login.component';
     ViewquestionsComponent,
     ScheduleexamComponent,
     AdmindashboardComponent,
-    LoginComponent
+    LoginComponent,
+    DashboardComponent,
+    UDashboardComponent,
+    UseraccountComponent
   ],
   imports: [
     BrowserModule,
