@@ -1,5 +1,6 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { NgbCalendar, NgbDatepicker, NgbDateStruct, NgbTimeStruct } from '@ng-bootstrap/ng-bootstrap';
+import { Component, OnInit } from '@angular/core';
+import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap/datepicker/ngb-date-struct';
+import { NgbTimeStruct } from '@ng-bootstrap/ng-bootstrap/timepicker/ngb-time-struct';
 
 @Component({
   selector: 'app-scheduleexam',
@@ -7,31 +8,12 @@ import { NgbCalendar, NgbDatepicker, NgbDateStruct, NgbTimeStruct } from '@ng-bo
   styleUrls: ['./scheduleexam.component.css']
 })
 export class ScheduleexamComponent implements OnInit {
-  selectedTime: NgbTimeStruct;
+  selectTime: NgbTimeStruct = {hour: 13, minute: 30, second: 0};
   selectedDate: NgbDateStruct;
-  date: { year: number, month: number };
-  @ViewChild('dp', {static: false}) dp: NgbDatepicker;
  
-  constructor(private calendar: NgbCalendar) { }
+  constructor() { }
 
   ngOnInit() {
-    
-  }
-
-  selectToday() {
-    this.selectedDate = this.calendar.getToday();
-  }
-
-  setCurrent() {
-    //Current Date
-    this.dp.navigateTo()
-  }
-  setDate() {
-    //Set specific date
-    this.dp.navigateTo({ year: 2013, month: 2 });
-  }
-
-  navigateEvent(event) {
-    this.date = event.next;
-  }
+    //this.selectedTime = {hour: 13, minute: 30, second: 0};
+  }  
 }
