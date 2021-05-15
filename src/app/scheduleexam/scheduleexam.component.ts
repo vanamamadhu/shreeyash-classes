@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { NgbCalendar, NgbDatepicker, NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
+import { NgbCalendar, NgbDatepicker, NgbDateStruct, NgbTimeStruct } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-scheduleexam',
@@ -7,17 +7,15 @@ import { NgbCalendar, NgbDatepicker, NgbDateStruct } from '@ng-bootstrap/ng-boot
   styleUrls: ['./scheduleexam.component.css']
 })
 export class ScheduleexamComponent implements OnInit {
-  selectedTime: any;
+  selectedTime: NgbTimeStruct;
   selectedDate: NgbDateStruct;
   date: { year: number, month: number };
   @ViewChild('dp', {static: false}) dp: NgbDatepicker;
-
-  
-  
+ 
   constructor(private calendar: NgbCalendar) { }
 
   ngOnInit() {
-    this.selectedTime = {hour: 13, minute: 30};
+    
   }
 
   selectToday() {

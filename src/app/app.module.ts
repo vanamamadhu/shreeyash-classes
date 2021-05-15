@@ -13,6 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './admindashboard/dashboard/dashboard.component';
 import { UDashboardComponent } from './userdashboard/dashboard/dashboard.component';
 import { UseraccountComponent } from './useraccount/useraccount.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { UseraccountComponent } from './useraccount/useraccount.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     NgbModule,
   ],
   providers: [],
