@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UserdashboardComponent } from './userdashboard/userdashboard.component';
 import { AddquestionsComponent } from './addquestions/addquestions.component';
 import { ViewquestionsComponent } from './viewquestions/viewquestions.component';
@@ -29,6 +30,7 @@ import { UseraccountComponent } from './useraccount/useraccount.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
