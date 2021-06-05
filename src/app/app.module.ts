@@ -14,6 +14,7 @@ import { DashboardComponent } from './admindashboard/dashboard/dashboard.compone
 import { UDashboardComponent } from './userdashboard/dashboard/dashboard.component';
 import { UseraccountComponent } from './useraccount/useraccount.component';
 import { FormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     FormsModule,
     NgbModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

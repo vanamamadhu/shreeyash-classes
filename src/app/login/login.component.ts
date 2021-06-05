@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
+import { NotificationService } from '../services/notification.service'
 
 @Component({
   selector: 'app-login',
@@ -8,13 +9,18 @@ import { Router } from '@angular/router';
   encapsulation: ViewEncapsulation.None
 })
 export class LoginComponent implements OnInit {
-
-  constructor(private router: Router) { }
-
+  userName: string = null;
+  password: string = null;
+  constructor(private router: Router,private notifyService : NotificationService) { }
   ngOnInit() {
   }
 
   login(){
-    this.router.navigate(['/admindashboard']);
+    if(this.userName == "shreeyash" && this.password == "shreeyash"){
+      this.router.navigate(['/admindashboard']);
+    }
+    else{
+      this.notifyService.showError("Please enter correct username/password", "Invalid")
+    }
   }
 }
