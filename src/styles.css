@@ -8128,7 +8128,7 @@
     font-size: 14px;
     line-height: 1.8;
     font-weight: normal;
-    background: #f266b9; /* #fafafa;*/
+    background: #fafafa;
     color: black; }
   
   a {
@@ -8323,8 +8323,7 @@
     background: #fff;
     color: rgb(12, 12, 12) !important;
     font-size: 13px;
-    border-radius: 4px;
-    border: transparent; }
+    border-radius: 4px;}
     .form-control:focus, .form-control:active {
       border-color: #000; }
     .form-control::-webkit-input-placeholder {
