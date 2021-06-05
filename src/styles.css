@@ -8323,7 +8323,11 @@
     background: #fff;
     color: rgb(12, 12, 12) !important;
     font-size: 13px;
+<<<<<<< HEAD
     border-radius: 4px;}
+=======
+    border-radius: 4px; }
+>>>>>>> a05521fc0d483e565ce0f62dab093471347d12ba
     .form-control:focus, .form-control:active {
       border-color: #000; }
     .form-control::-webkit-input-placeholder {
