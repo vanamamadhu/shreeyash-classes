@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserdashboardComponent } from './userdashboard/userdashboard.component';
 import { AddquestionsComponent } from './addquestions/addquestions.component';
 import { ViewquestionsComponent } from './viewquestions/viewquestions.component';
@@ -34,6 +35,7 @@ import { ToastrModule } from 'ngx-toastr';
     AppRoutingModule,
     FormsModule,
     NgbModule,
+    BrowserAnimationsModule,
     ToastrModule.forRoot()
   ],
   providers: [],

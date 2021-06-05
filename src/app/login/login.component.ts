@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['/admindashboard']);
     }
     else{
-      this.notifyService.showError("Please enter correct username/password", "Invalid")
+      this.notifyService.showError("Please enter correct username/password", "Invalid Credentials")
     }
   }
 }
