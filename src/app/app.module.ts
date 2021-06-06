@@ -14,8 +14,11 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './admindashboard/dashboard/dashboard.component';
 import { UDashboardComponent } from './userdashboard/dashboard/dashboard.component';
 import { UseraccountComponent } from './useraccount/useraccount.component';
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
+import { CustomListboxComponent } from './scheduleexam/custom-listbox/custom-listbox.component';
+import { AngularDualListBoxModule } from 'angular-dual-listbox';
 
 @NgModule({
   declarations: [
@@ -28,14 +31,20 @@ import { ToastrModule } from 'ngx-toastr';
     LoginComponent,
     DashboardComponent,
     UDashboardComponent,
-    UseraccountComponent
+    UseraccountComponent,
+    CustomListboxComponent
   ],
+  exports: [
+		CustomListboxComponent
+	],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    CommonModule,
     NgbModule,
     BrowserAnimationsModule,
+    AngularDualListBoxModule,
     ToastrModule.forRoot()
   ],
   providers: [],

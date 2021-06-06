@@ -1,38 +1,50 @@
 <h2 class="mb-4">Shedual Exam</h2>
 
 <form>
-    <div class="row mb-4">
-        <div class="col-5">
-            <label for="language">Select the  language :</label>
-            <select class="form-control">
-                <option>Mathematics</option>
-                <option>Science</option>
-            </select>
+    <div>
+        <div class="row mb-4">
+            <div class="col-5">
+                <label for="language">Select the  language :</label>
+                <select class="form-control">
+                    <option>Mathematics</option>
+                    <option>Science</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-5">  
+                <label for="language">Select Exam Date and Time:</label> 
+                <div class="input-group" style="margin-top: 6px;">
+                    <input class="form-control" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="selectedDate" ngbDatepicker #d="ngbDatepicker">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button">📅</button>
+                    </div>
+                </div>         
+            </div>
+            <div class="form-group c0l-5">
+                <ngb-timepicker name="dt" [(ngModel)]="selectTime" [seconds]="true" [meridian]="true"></ngb-timepicker>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-5">
+                <label for="language">Select user name :</label>
+                <input type="text" class="form-control" id="username" placeholder="User Name">
+            </div>
+            <div class="form-group col-5">
+                <label for="language">Select user id :</label>
+                <input type="text" class="form-control" id="userid" placeholder="User Id">
+            </div>
         </div>
     </div>
-    <div class="row">
-        <div class="form-group col-5">  
-            <label for="language">Select Exam Date and Time:</label> 
-            <div class="input-group" style="margin-top: 6px;">
-                <input class="form-control" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="selectedDate" ngbDatepicker #d="ngbDatepicker">
-                <div class="input-group-append">
-                  <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button">📅</button>
-                </div>
-            </div>         
+    <div>
+        <div>
+            <button class="btn btn-success" (click)="refreshSourceData()">Refresh</button>
         </div>
-        <div class="form-group c0l-5">
-            <ngb-timepicker name="dt" [(ngModel)]="selectTime" [seconds]="true" [meridian]="true"></ngb-timepicker>
+        <div class="mb-2" style="text-align:center">
+            <app-custom-listbox [source]="source" [(destination)]="target" height="350px"
+                (selectChange)="showMessage($event)"></app-custom-listbox>
         </div>
     </div>
-    <div class="row">
-        <div class="form-group col-5">
-            <label for="language">Select user name :</label>
-            <input type="text" class="form-control" id="username" placeholder="User Name">
-        </div>
-        <div class="form-group col-5">
-            <label for="language">Select user id :</label>
-            <input type="text" class="form-control" id="userid" placeholder="User Id">
-        </div>
-    </div>
-    <button class="btn btn-success pull-right row">Schedule</button>
+    <button class="btn btn-success" style="float: right; margin-left: 10px;">Next</button>
+    <button class="btn btn-success pull-right">Back</button>
 </form>
