@@ -6,8 +6,8 @@
             <div class="col-5">
                 <label for="language">Select the  language :</label>
                 <select class="form-control">
-                    <option>Mathematics</option>
-                    <option>Science</option>
+                    <option></option>
+                    <option *ngFor="let item of languages">{{item}}</option>
                 </select>
             </div>
         </div>

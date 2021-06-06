@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap/datepicker/ngb-date-struct';
 import { NgbTimeStruct } from '@ng-bootstrap/ng-bootstrap/timepicker/ngb-time-struct';
+import { ApplicationConstants } from '../constants.component';
 
 @Component({
   selector: 'app-scheduleexam',
@@ -38,11 +39,10 @@ export class ScheduleexamComponent implements OnInit {
 		"Elephant & Castle"
 	];
   target = [];
-
 	message;
 	source = ScheduleexamComponent.tube;
-  constructor() { }
-
+  constructor(private appconstants:ApplicationConstants) { }
+  languages: Array<string> = this.appconstants.languages;
   ngOnInit() {
     //this.selectedTime = {hour: 13, minute: 30, second: 0};
   }  

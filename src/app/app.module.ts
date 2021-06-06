@@ -19,6 +19,7 @@ import { FormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { CustomListboxComponent } from './scheduleexam/custom-listbox/custom-listbox.component';
 import { AngularDualListBoxModule } from 'angular-dual-listbox';
+import { ApplicationConstants } from './constants.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,9 @@ import { AngularDualListBoxModule } from 'angular-dual-listbox';
     AngularDualListBoxModule,
     ToastrModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    ApplicationConstants
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
