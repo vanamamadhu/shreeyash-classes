@@ -28,14 +28,14 @@
         <div  class="row">
             <div class="col-3">
                 <label for="language">* Select the standard :</label>
-                <select class="form-control">
+                <select class="form-control" [(ngModel)]="selectedStandard" (change)="onStandardSelect($event)">
                     <option></option>
                     <option *ngFor="let item of standard">{{item}}</option>
                 </select>
             </div>
             <div class="col-2">
                 <label for="language">* Select the batch :</label>
-                <select class="form-control" [(ngModel)]="selectedBatch" (change)="onBatchSelect()">
+                <select class="form-control" [(ngModel)]="selectedBatch" (change)="onBatchSelect($event)">
                     <option></option>
                     <option *ngFor="let item of batches">{{item}}</option>
                 </select>
@@ -56,12 +56,19 @@
         </div>
     </div>
     <div *ngIf="isNext">
-        <div>
-            <button class="btn btn-success" (click)="refreshSourceData()">Refresh</button>
+        <div class="row">
+            <div class="col-3" style="margin-top: 5px;">
+                <label for="language">* Select chapter :</label>
+                <select class="form-control">
+                    <option></option>
+                    <option *ngFor="let item of chapters">{{item}}</option>
+                </select>
+            </div>
+            <button class="btn btn-success" (click)="refreshSourceData()" style="margin-top: 38px;">Refresh</button>
         </div>
         <div class="mb-2" style="text-align:center">
-            <app-custom-listbox [source]="source" [(destination)]="target" height="350px"
-                (selectChange)="showMessage($event)"></app-custom-listbox>
+            <!-- <app-custom-listbox [source]="source" [(destination)]="target" height="350px"
+                (selectChange)="showMessage($event)"></app-custom-listbox> -->
         </div>
     </div>
     <button class="btn btn-info" style="float: right; margin-left: 10px;" [disabled]="isNext" (click)="clickNext()">Next</button>

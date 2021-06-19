@@ -17,7 +17,6 @@ import { UseraccountComponent } from './useraccount/useraccount.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
-import { CustomListboxComponent } from './scheduleexam/custom-listbox/custom-listbox.component';
 import { AngularDualListBoxModule } from 'angular-dual-listbox';
 import { ApplicationConstants } from './constants.component';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
@@ -34,10 +33,8 @@ import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
     DashboardComponent,
     UDashboardComponent,
     UseraccountComponent,
-    CustomListboxComponent
   ],
   exports: [
-		CustomListboxComponent
 	],
   imports: [
     BrowserModule,
