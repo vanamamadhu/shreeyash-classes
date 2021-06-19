@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap/datepicker/ngb-date-struct';
 import { NgbTimeStruct } from '@ng-bootstrap/ng-bootstrap/timepicker/ngb-time-struct';
 import { ApplicationConstants } from '../constants.component';
-import { IDropdownSettings } from 'ng-multiselect-dropdown';
 
 @Component({
   selector: 'app-scheduleexam',
@@ -47,7 +46,6 @@ export class ScheduleexamComponent implements OnInit {
   target = [];
   message;
   source = ScheduleexamComponent.tube;
-  dropdownSettings: IDropdownSettings;
   selectedBatch: any = "";
   constructor(private appconstants:ApplicationConstants) { }
   languages: Array<string> = this.appconstants.languages;
@@ -57,15 +55,6 @@ export class ScheduleexamComponent implements OnInit {
 	this.selectedbatchmembers = ["madhusudhan","rao","mohan","ramesh","nagu","arjun lerin suravaram",
 	"madhusudhan","rao","mohan","ramesh","nagu","madhusudhan","rao","mohan","ramesh","nagu","madhusudhan","rao","mohan","ramesh","nagu","madhusudhan","rao","mohan","ramesh","nagu",
 	"madhusudhan","rao","mohan","ramesh","nagu","madhusudhan","rao","mohan","ramesh","nagu","madhusudhan","rao","mohan","ramesh","nagu"]
-	this.dropdownSettings = {
-		singleSelection: false,
-		idField: 'item_id',
-		textField: 'item_text',
-		selectAllText: 'Select All',
-		unSelectAllText: 'UnSelect All',
-		itemsShowLimit: 3,
-		allowSearchFilter: true
-	  }; 
   }  
   showMessage(e:any) {
 		this.message = { selectChange: e };
@@ -83,6 +72,7 @@ export class ScheduleexamComponent implements OnInit {
   {
 	  var batchmemberslist = [];
 	  if(batchName != null && batchName != ""){
+		batchmemberslist = this.selectedbatchmembers;
 		  //Ajax call to get the batch members list		
 	  }
 	  return batchmemberslist;
