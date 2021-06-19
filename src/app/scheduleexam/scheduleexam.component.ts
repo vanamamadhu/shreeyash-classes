@@ -54,6 +54,9 @@ export class ScheduleexamComponent implements OnInit {
   ngOnInit() {
 	this.batches = this.appconstants.batches;
 	this.standard = this.appconstants.standard;
+	this.selectedbatchmembers = ["madhusudhan","rao","mohan","ramesh","nagu","arjun lerin suravaram",
+	"madhusudhan","rao","mohan","ramesh","nagu","madhusudhan","rao","mohan","ramesh","nagu","madhusudhan","rao","mohan","ramesh","nagu","madhusudhan","rao","mohan","ramesh","nagu",
+	"madhusudhan","rao","mohan","ramesh","nagu","madhusudhan","rao","mohan","ramesh","nagu","madhusudhan","rao","mohan","ramesh","nagu"]
 	this.dropdownSettings = {
 		singleSelection: false,
 		idField: 'item_id',
@@ -115,5 +118,10 @@ export class ScheduleexamComponent implements OnInit {
 	  {
 
 	  }
+  }
+
+  removeFromBatch(item)
+  {
+	  alert(item)
   }
 }

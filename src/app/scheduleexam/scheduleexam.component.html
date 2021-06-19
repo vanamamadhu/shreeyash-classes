@@ -41,9 +41,17 @@
                 </select>
             </div>
             <div class="col-5" style="margin-top: 32px;">
-                <ng-multiselect-dropdown [placeholder]="'custom placeholder'" [settings]="dropdownSettings"
-                [(ngModel)]="selectedbatchmembers" name="multidropdown">
-               </ng-multiselect-dropdown>
+                <div class="div-scroll">
+                    <div class="record-picker">
+                        <div *ngFor="let personname of selectedbatchmembers">
+                            <span class="selected-item">
+                                <span> {{personname}} 
+                                    <i class="fa fa-times" style="color:white;margin-left: 2px;" (click)="removeFromBatch(personname)"></i>
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
