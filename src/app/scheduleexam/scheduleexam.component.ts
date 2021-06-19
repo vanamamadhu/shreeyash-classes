@@ -14,6 +14,7 @@ export class ScheduleexamComponent implements OnInit {
   selectedDate: NgbDateStruct;
   selectedbatchmembers = [];
   batches =[];
+  standard = [];
   isNext :boolean = false;
   isBack :boolean = true;
   static tube:Array<string> = [
@@ -52,6 +53,7 @@ export class ScheduleexamComponent implements OnInit {
   languages: Array<string> = this.appconstants.languages;
   ngOnInit() {
 	this.batches = this.appconstants.batches;
+	this.standard = this.appconstants.standard;
 	this.dropdownSettings = {
 		singleSelection: false,
 		idField: 'item_id',
