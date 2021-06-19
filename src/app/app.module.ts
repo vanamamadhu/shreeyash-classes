@@ -20,6 +20,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { CustomListboxComponent } from './scheduleexam/custom-listbox/custom-listbox.component';
 import { AngularDualListBoxModule } from 'angular-dual-listbox';
 import { ApplicationConstants } from './constants.component';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { ApplicationConstants } from './constants.component';
     NgbModule,
     BrowserAnimationsModule,
     AngularDualListBoxModule,
+    NgMultiSelectDropDownModule.forRoot(),
     ToastrModule.forRoot()
   ],
   providers: [

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap/datepicker/ngb-date-struct';
 import { NgbTimeStruct } from '@ng-bootstrap/ng-bootstrap/timepicker/ngb-time-struct';
 import { ApplicationConstants } from '../constants.component';
+import { IDropdownSettings } from 'ng-multiselect-dropdown';
 
 @Component({
   selector: 'app-scheduleexam',
@@ -11,6 +12,10 @@ import { ApplicationConstants } from '../constants.component';
 export class ScheduleexamComponent implements OnInit {
   selectTime: NgbTimeStruct = {hour: 13, minute: 30, second: 0};
   selectedDate: NgbDateStruct;
+  selectedbatchmembers = [];
+  batches =[];
+  isNext :boolean = false;
+  isBack :boolean = true;
   static tube:Array<string> = [
 		"Harrow & Wealdstone",
 		"Kenton",
@@ -39,12 +44,23 @@ export class ScheduleexamComponent implements OnInit {
 		"Elephant & Castle"
 	];
   target = [];
-	message;
-	source = ScheduleexamComponent.tube;
+  message;
+  source = ScheduleexamComponent.tube;
+  dropdownSettings: IDropdownSettings;
+  selectedBatch: any = "";
   constructor(private appconstants:ApplicationConstants) { }
   languages: Array<string> = this.appconstants.languages;
   ngOnInit() {
-    //this.selectedTime = {hour: 13, minute: 30, second: 0};
+	this.batches = this.appconstants.batches;
+	this.dropdownSettings = {
+		singleSelection: false,
+		idField: 'item_id',
+		textField: 'item_text',
+		selectAllText: 'Select All',
+		unSelectAllText: 'UnSelect All',
+		itemsShowLimit: 3,
+		allowSearchFilter: true
+	  }; 
   }  
   showMessage(e:any) {
 		this.message = { selectChange: e };
@@ -53,5 +69,49 @@ export class ScheduleexamComponent implements OnInit {
 
   refreshSourceData(){
     this.source = [];
+  }
+  onBatchSelect(item: any) {
+	  this.selectedbatchmembers = this.getBatchDetail(this.selectedBatch);
+  }
+
+  getBatchDetail(batchName)
+  {
+	  var batchmemberslist = [];
+	  if(batchName != null && batchName != ""){
+		  //Ajax call to get the batch members list		
+	  }
+	  return batchmemberslist;
+  }
+  validateafirstpagedata()
+  {
+	  var validateIndicater = true;
+	  return validateIndicater;
+  }
+  clickNext()
+  {
+	if(this.validateafirstpagedata())
+	{
+		this.isBack = false;
+		this.isNext = true;
+	}
+  }
+
+  clickBack()
+  {
+	this.isBack = true;
+	this.isNext = false;
+  }
+
+  validateasecondpagedata()
+  {
+	  var validateIndicater = false;
+	  return validateIndicater;
+  }
+  scheduleBatchExam()
+  {
+	  if(this.validateasecondpagedata())
+	  {
+
+	  }
   }
 }
