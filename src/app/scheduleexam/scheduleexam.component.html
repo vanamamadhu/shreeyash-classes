@@ -66,9 +66,32 @@
             </div>
             <button class="btn btn-success" (click)="refreshSourceData()" style="margin-top: 38px;">Refresh</button>
         </div>
-        <div class="mb-2" style="text-align:center">
-            <!-- <app-custom-listbox [source]="source" [(destination)]="target" height="350px"
-                (selectChange)="showMessage($event)"></app-custom-listbox> -->
+        <div class="mb-2 mt-2" style="text-align:center">
+            <div class="div-scroll col-5" style="float: left;">
+                <div class="record-picker">
+                    <div *ngFor="let personname of selectedbatchmembers">
+                        <span class="selected-item">
+                            <span> {{personname}} 
+                                <i class="fa fa-times" style="color:white;margin-left: 2px;" (click)="removeFromBatch(personname)"></i>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div style="float: left; margin-top: 174px; margin: 10px;">
+                <button class="btn btn-info">Move -></button>
+            </div>
+            <div class="div-scroll col-5" style="float: left;">
+                <div class="record-picker">
+                    <div *ngFor="let personname of selectedbatchmembers">
+                        <span class="selected-item">
+                            <span> {{personname}} 
+                                <i class="fa fa-times" style="color:white;margin-left: 2px;" (click)="removeFromBatch(personname)"></i>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <button class="btn btn-info" style="float: right; margin-left: 10px;" [disabled]="isNext" (click)="clickNext()">Next</button>
