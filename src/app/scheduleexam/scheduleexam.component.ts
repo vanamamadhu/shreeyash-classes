@@ -130,7 +130,9 @@ export class ScheduleexamComponent implements OnInit {
 
   removeFromBatch(item)
   {
-	  alert(item)
+	  this.selectedbatchmembers = this.selectedbatchmembers.filter((person, index) => {
+		return this.selectedbatchmembers.indexOf(item) !== index;
+	  });
   }
 
   moveselectequestion()
