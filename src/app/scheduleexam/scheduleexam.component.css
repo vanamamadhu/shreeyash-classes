@@ -11,6 +11,29 @@
     margin-bottom: 4px;
 }
 
+.selected-item-right {
+    border: 1px solid #337ab7;
+    margin-right: 4px;
+    background: #337ab7;
+    color: #fff;
+    border-radius: 2px;
+    display: flex;
+    padding: 5px;
+    max-width: fit-content;
+    margin-bottom: 4px;
+}
+.selected-item-left {
+    border: 1px solid #337ab7;
+    margin-right: 4px;
+    background: #337ab7;
+    color: #fff;
+    border-radius: 2px;
+    display: flex;
+    padding: 5px;
+    max-width: fit-content;
+    margin-bottom: 4px;
+}
+
 div.record-picker {
     overflow-x: hidden;
     overflow-y: auto;
@@ -28,10 +51,21 @@ div.record-picker {
     justify-content: space-evenly;
 }
 
-.div-scroll {
+.div-scroll-page1 {
     height: 300px;
     overflow:scroll;
     border:solid 2px orange;
     overflow-x:hidden;
     overflow-y:scroll;
+}
+
+.div-scroll {
+    height: 380px;
+    width: 998px;
+    overflow: scroll;
+    border: solid 2px orange;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin-bottom: 15px;
+    margin-top: 15px;
 }

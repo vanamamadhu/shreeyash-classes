@@ -41,7 +41,7 @@
                 </select>
             </div>
             <div class="col-5" style="margin-top: 32px;">
-                <div class="div-scroll">
+                <div class="div-scroll-page1">
                     <div class="record-picker">
                         <div *ngFor="let personname of selectedbatchmembers">
                             <span class="selected-item">
@@ -66,36 +66,41 @@
             </div>
             <button class="btn btn-success" (click)="refreshSourceData()" style="margin-top: 38px;">Refresh</button>
         </div>
-        <div class="mb-2 mt-2" style="text-align:center">
-            <div class="div-scroll col-5" style="float: left;">
-                <div class="record-picker">
-                    <div *ngFor="let personname of selectedbatchmembers">
-                        <span class="selected-item">
-                            <span> {{personname}} 
-                                <i class="fa fa-times" style="color:white;margin-left: 2px;" (click)="removeFromBatch(personname)"></i>
+        <div class="row">
+            <div class="mb-2 mt-2" style="text-align:center">
+                <div class="div-scroll col-5" style="float: left;">
+                    <div class="record-picker">
+                        <div *ngFor="let question of questionsfromchapter">
+                            <span class="selected-item-right">
+                                <span> 
+                                    <input type="checkbox" value="question" (click)="selecteditems(question)">
+                                    {{question}} 
+                                </span>
                             </span>
-                        </span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div style="float: left; margin-top: 174px; margin: 10px;">
-                <button class="btn btn-info">Move -></button>
-            </div>
-            <div class="div-scroll col-5" style="float: left;">
-                <div class="record-picker">
-                    <div *ngFor="let personname of selectedbatchmembers">
-                        <span class="selected-item">
-                            <span> {{personname}} 
-                                <i class="fa fa-times" style="color:white;margin-left: 2px;" (click)="removeFromBatch(personname)"></i>
+                <div style="float: left; margin-top: 174px; margin: 10px;">
+                    <button class="btn btn-info" (click)="moveselectequestion()">Move -></button>
+                </div>
+                <div class="div-scroll col-5" style="float: left;">
+                    <div class="record-picker">
+                        <div *ngFor="let question of selectedquestionsfromchapters">
+                            <span class="selected-item-left">
+                                <span> {{question}} 
+                                    <i class="fa fa-times" style="color:white;margin-left: 2px;" (click)="removequestionfromselected(question)"></i>
+                                </span>
                             </span>
-                        </span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <button class="btn btn-info" style="float: right; margin-left: 10px;" [disabled]="isNext" (click)="clickNext()">Next</button>
-    <button class="btn btn-info pull-right" [disabled]="isBack" (click)="clickBack()">Back</button>
+    <div class="row pull-right">
+        <button class="btn btn-info" [disabled]="isBack" (click)="clickBack()">Back</button>
+        <button class="btn btn-info" style="margin-left: 10px;" [disabled]="isNext" (click)="clickNext()">Next</button>
+    </div>
 </div>
-<button class="btn btn-success pull-right" *ngIf="!isBack" (click)="scheduleBatchExam()" style="margin-top: 35px; margin-right: -130px;">Shedual Exam</button>
+<button class="btn btn-success pull-right" *ngIf="!isBack" (click)="scheduleBatchExam()" style="margin-top: 26px; margin-right: -116px;">Shedual Exam</button>
 
