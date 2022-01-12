@@ -18,7 +18,7 @@ export class NewuserComponent implements OnInit {
   ngOnInit() {
     this.form = this.formBuilder.group({
       firstname: ['', Validators.required],
-      lasttname: ['', Validators.required],
+      lastname: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       phonenumber: [null, Validators.required],
       usertype: ['', Validators.required],
@@ -36,9 +36,11 @@ export class NewuserComponent implements OnInit {
   }
   onSubmit(){
     if(this.form.invalid){
-      this.notifyService.showError("Please enter correct username/password", "Invalid Credentials")
+      this.notifyService.showError("please fill in all mandatory fields marked with an asterisk (*)", "")
     }
-    this.notifyService.showSuccess("","Success!");
+    else{
+      this.notifyService.showSuccess("","Success!");
+    }
   }
   backtologin(){
     this.router.navigate(['/login']);

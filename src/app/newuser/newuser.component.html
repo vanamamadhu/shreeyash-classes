@@ -52,8 +52,12 @@
                         <input type="text" formControlName="country" placeholder="Enter your country">
                     </div>
                     <div class="input-box">
-                        <span class="details">* Standard</span>
-                        <input type="text" formControlName="standard" placeholder="Enter your standard">
+                        <span class="details">* User Type</span>
+                        <select class="usertypeSelect" formControlName="usertype" placeholder="Enter your standard">
+                            <option value="" selected></option>
+                            <option value="Student" selected>Student/Candidate</option>
+                            <option value="Teacher">Teacher/Professor</option>
+                        </select>
                     </div>
                 </div>
                 <div class="button">
