@@ -1,0 +1,70 @@
+<body>
+    <div class="container">
+        <div class="title">Registration</div>
+        <div class="content">
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">* First Name</span>
+                        <input type="text" formControlName="firstname" placeholder="Enter your first name">
+                        <!-- <div *ngIf="firstname.invalid" class="invalid-feedback">
+                            <div *ngIf="firstname.errors.required && (form.controls.firstname.touched || form.controls.firstname.dirty)">First name is required</div>
+                        </div> -->
+                    </div>
+                    <div class="input-box">
+                        <span class="details">* Last Name</span>
+                        <input type="text" formControlName="lastname" placeholder="Enter your last name">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">* Email</span>
+                        <input type="text" formControlName="email" placeholder="Enter your email">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">* Phone Number</span>
+                        <input type="text" formControlName="phonenumber" placeholder="Enter your number">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">* Password</span>
+                        <input type="text" formControlName="password" placeholder="Enter your password">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">* Confirm Password</span>
+                        <input type="text" formControlName="confirmpassword" placeholder="Confirm your password">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">* Standard</span>
+                        <input type="text" formControlName="standard" placeholder="Enter your standard">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">* Address</span>
+                        <input type="text" formControlName="address" placeholder="Enter your address">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">* City</span>
+                        <input type="text" formControlName="city" placeholder="Enter your city">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">* State</span>
+                        <input type="text" formControlName="state" placeholder="Enter your state">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">* Country</span>
+                        <input type="text" formControlName="country" placeholder="Enter your country">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">* Standard</span>
+                        <input type="text" formControlName="standard" placeholder="Enter your standard">
+                    </div>
+                </div>
+                <div class="button">
+                    <input type="submit" value="Register" style="margin-left: 10px;">
+                    <input type="button" (click)="backtologin()" value="Back to login">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+<!-- 
+
+</div> -->

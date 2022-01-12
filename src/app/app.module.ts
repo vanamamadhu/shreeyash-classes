@@ -15,11 +15,13 @@ import { DashboardComponent } from './admindashboard/dashboard/dashboard.compone
 import { UDashboardComponent } from './userdashboard/dashboard/dashboard.component';
 import { UseraccountComponent } from './useraccount/useraccount.component';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms'
+import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { AngularDualListBoxModule } from 'angular-dual-listbox';
 import { ApplicationConstants } from './constants.component';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
+import { NewuserComponent } from './newuser/newuser.component';
 
 @NgModule({
   declarations: [
@@ -33,12 +35,14 @@ import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
     DashboardComponent,
     UDashboardComponent,
     UseraccountComponent,
+    NewuserComponent,
   ],
   exports: [
 	],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     FormsModule,
     CommonModule,
     NgbModule,

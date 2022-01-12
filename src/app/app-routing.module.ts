@@ -4,6 +4,7 @@ import { AddquestionsComponent } from './addquestions/addquestions.component';
 import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
 import { DashboardComponent } from './admindashboard/dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
+import { NewuserComponent } from './newuser/newuser.component';
 import { ScheduleexamComponent } from './scheduleexam/scheduleexam.component';
 import { UseraccountComponent } from './useraccount/useraccount.component';
 import { UDashboardComponent } from './userdashboard/dashboard/dashboard.component';
@@ -30,6 +31,7 @@ const routes: Routes = [
       { path: "viewquestion", component: ViewquestionsComponent},
     ]
   },
+  { path: 'newuser', component: NewuserComponent},
   { path: '**', component: LoginComponent},
 ];
 
