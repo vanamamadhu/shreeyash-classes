@@ -1,0 +1,40 @@
+.nav-size {
+    height: 10vh;
+    margin-left: 41vh;
+}
+
+.contect-size {
+    margin-left: 41vh;
+}
+
+.title-color {
+    width: 100%;
+    margin-left: 20px;
+    color: cadetblue;
+}
+
+.logout-align {
+    font-size: 30px;
+    width: 100%;
+    text-align: right;
+    margin-right: 15px;
+}
+
+.menu-newline {
+    border: 5px solid rgb(212, 134, 209);
+    border-radius: 5px;
+    margin-top: 0px;
+}
+
+.vertical-nav {
+    min-width: 17rem;
+    width: 17rem;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s;
+  }
+  
+  

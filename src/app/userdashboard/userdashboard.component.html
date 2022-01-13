@@ -1,26 +1,51 @@
-<div class="container d-flex align-items-stretch">
-    <nav id="sidebar" class="img" style="background-image: url(../images/bg_1.jpg);">
-        <div class="p-4">
-          <h1>SHREEYASH <span>CLASSES</span></h1>
-    <ul class="list-unstyled components mb-5">
-      <li class="active">
-        <a routerLink="dashboard"><span class="fa fa-home mr-3"></span> Dash Board</a>
-      </li>
-      <li>
-          <a routerLink="useraccount"><span class="fa fa-user mr-3"></span> Account</a>
-      </li>    
-    </ul>
-
-    <div class="footer">
-        <p>
-                  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i>
-        </p>
-    </div>
+<!-- Vertical navbar -->
+<div class="vertical-nav bg-white" id="sidebar">
+  <div class="mb-4">
+    <span class="login100-form-title">
+      <img src="assets/images/shreeyash_logo_png.png" style="width: 269px;"/>
+    </span>
   </div>
-</nav>
-
-<!-- Page Content  -->
-<div id="content" class="p-4 p-md-5 pt-5">
-  <router-outlet></router-outlet>
+  <ul class="nav flex-column bg-white mb-0" style="margin-top: 0px;">
+    <li class="nav-item">
+      <a [routerLink]="['/userdashboard/dashboard']" class="nav-link text-dark font-italic">
+        <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+        Home
+      </a>
+    </li>
+    <li class="nav-item">
+      <a [routerLink]="['/userdashboard/useraccount']" class="nav-link text-dark font-italic">
+        <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+        View Question Papers
+      </a>
+    </li>
+    <li class="nav-item">
+      <a [routerLink]="['/login']" class="nav-link text-dark font-italic">
+        <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
+        About
+      </a>
+    </li>
+    <li class="nav-item">
+      <a [routerLink]="['/login']" class="nav-link text-dark font-italic">
+        <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
+        Gallery
+      </a>
+    </li>
+  </ul>
+  
 </div>
+<!-- End vertical navbar -->
+
+<!-- Page content holder -->
+<div>
+  <nav class="navbar navbar-expand-sm bg-light nav-size">
+    <span class="title-color">
+      <h2>Welcome to Shree Yash Classes</h2>
+    </span>
+    <div class="container-fluid" style="float: right;">
+      <a [routerLink]="['/login']" class="logout-align"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+    </div>
+  </nav>
+  <div id="content" class="p-4 contect-size">
+    <router-outlet></router-outlet>
+  </div>
 </div>

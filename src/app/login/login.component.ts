@@ -17,7 +17,8 @@ export class LoginComponent implements OnInit {
 
   login(){
     if(this.userName == "shreeyash" && this.password == "shreeyash"){
-      this.router.navigate(['/admindashboard']);
+      //this.router.navigate(['/admindashboard']);
+      this.router.navigate(['/userdashboard']);
     }
     else{
       this.notifyService.showError("Please enter correct username/password", "Invalid Credentials")
